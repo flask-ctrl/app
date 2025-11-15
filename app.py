@@ -103,7 +103,7 @@ def list_users():
     users = [serialize_user(d) for d in docs]
     return jsonify(users), 200
 
-@app.route("/api/users/<user_id>", methods=["GET"])
+@app.route("/users/<user_id>", methods=["GET"])
 def get_user(user_id):
     """
     GET /api/users/<user_id>
@@ -275,6 +275,7 @@ def health():
 if __name__ == "__main__":
     # debug=True สำหรับการพัฒนา (auto reload) — ปิดเมื่อ deploy production
     app.run(host="0.0.0.0", port=PORT, debug=True)
+
 
 
 
