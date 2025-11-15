@@ -91,7 +91,7 @@ def build_id_query(user_id):
 
 # ---------- Routes (API endpoints) ----------
 
-@app.route("/api/users", methods=["GET"])
+@app.route("/users", methods=["GET"])
 def list_users():
     """
     GET /api/users
@@ -275,6 +275,7 @@ def health():
 if __name__ == "__main__":
     # debug=True สำหรับการพัฒนา (auto reload) — ปิดเมื่อ deploy production
     app.run(host="0.0.0.0", port=PORT, debug=True)
+
 
 
 
